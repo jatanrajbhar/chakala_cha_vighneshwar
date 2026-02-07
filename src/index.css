@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Ganesh Utsav Theme - Crimson, Saffron, Gold */
+    --background: 0 0% 5%;
+    --foreground: 40 30% 95%;
+
+    --card: 0 40% 8%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 0 40% 8%;
+    --popover-foreground: 40 30% 95%;
+
+    /* Deep Crimson - Primary */
+    --primary: 0 67% 33%;
+    --primary-foreground: 40 30% 95%;
+
+    /* Saffron Orange - Secondary */
+    --secondary: 25 96% 50%;
+    --secondary-foreground: 0 0% 5%;
+
+    /* Muted dark tones */
+    --muted: 0 20% 15%;
+    --muted-foreground: 40 10% 65%;
+
+    /* Gold Accent */
+    --accent: 45 85% 50%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 30% 95%;
+
+    --border: 0 30% 20%;
+    --input: 0 30% 20%;
+    --ring: 25 96% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0% / 0.3) 0%, hsl(0 0% 0% / 0.7) 100%);
+    --gradient-crimson: linear-gradient(135deg, hsl(0 67% 33%) 0%, hsl(0 50% 20%) 100%);
+    --gradient-saffron: linear-gradient(135deg, hsl(25 96% 50%) 0%, hsl(45 85% 50%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 50%) 0%, hsl(35 90% 55%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 20% 8%) 100%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(25 96% 50% / 0.3);
+    --shadow-crimson: 0 4px 30px hsl(0 67% 33% / 0.5);
+    --shadow-gold: 0 4px 30px hsl(45 85% 50% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .text-gradient-saffron {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-saffron);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-crimson {
+    background-image: var(--gradient-crimson);
+  }
+
+  .bg-gradient-dark {
+    background-image: var(--gradient-dark);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-crimson {
+    box-shadow: var(--shadow-crimson);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .section-container {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .parallax-layer {
+    @apply absolute inset-0 bg-cover bg-center bg-no-repeat;
+    will-change: transform;
+  }
+}
+
+@layer utilities {
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px hsl(0 0% 0% / 0.8);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(25 96% 50% / 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(25 96% 50% / 0.6);
+    }
+  }
+}
