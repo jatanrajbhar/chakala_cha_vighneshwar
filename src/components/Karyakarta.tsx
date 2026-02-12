@@ -31,6 +31,17 @@ const teamMembers = [
   "Sahil Rajbhar",
   "Jay Mistry",
   "Ganesh Gupta",
+  // Placing requested Sabhasad profiles at positions 13–20
+  "Sahil Halwai",
+  "Anish Gupta",
+  "Akash Mukharji",
+  "Pranay Pawar",
+  "Anand Anpathe",
+  "Arvind Prabhulkar",
+  "Sahil Naik",
+  "Piyush Ayaram",
+  "Aniket Gupta",
+  // Remaining original members (shifted after the inserted block)
   "Larry Dsilva",
   "Pratik Gawale",
   "Pritam Gupta",
@@ -50,6 +61,30 @@ const teamMembers = [
   name,
   image: findImageForName(name),
 }));
+
+// Ensure `Sahil Naik` uses the exact provided photo if it's present in the assets
+(() => {
+  const target = Object.keys(karayaModules).find((p) =>
+    p.toLowerCase().endsWith("sahil naik.jpeg")
+  );
+  if (target) {
+    const img = karayaModules[target].default || karayaModules[target];
+    const idx = teamMembers.findIndex((m) => m.name === "Sahil Naik");
+    if (idx !== -1) teamMembers[idx].image = img;
+  }
+})();
+
+// Ensure `Sahil Rajbhar` uses the exact provided photo
+(() => {
+  const target = Object.keys(karayaModules).find((p) =>
+    p.toLowerCase().endsWith("sahil rajbhar.jpeg")
+  );
+  if (target) {
+    const img = karayaModules[target].default || karayaModules[target];
+    const idx = teamMembers.findIndex((m) => m.name === "Sahil Rajbhar");
+    if (idx !== -1) teamMembers[idx].image = img;
+  }
+})();
 
 const Karyakarta = () => {
   const { t } = useI18n();
