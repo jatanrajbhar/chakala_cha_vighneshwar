@@ -2,7 +2,7 @@
 
 Official website for **Chakala Sarvajanik Ganesh Utsav Mandal** — one of Andheri East's largest youth-led Ganesh Utsav celebrations.
 
-**Live:** https://chakalachavighneshwar.netlify.app
+**Live:** https://chakalachavigneshwar.vercel.app
 
 ## About
 
@@ -28,7 +28,7 @@ Ten years ago, a group of five teenagers founded the Chakala Sarvajanik Ganesh U
 - **shadcn/ui** for UI components
 - **Framer Motion** for animations
 - **React Router** for routing
-- **Netlify** for hosting
+- **Vercel** for hosting
 
 ## Getting Started
 
@@ -51,12 +51,6 @@ npm run build
 npm run preview
 ```
 
-### Deploy to Netlify
-
-```bash
-npx vite build && npx netlify deploy --prod --dir=dist
-```
-
 ## Project Structure
 
 ```
@@ -70,11 +64,8 @@ src/
   test/            # Test setup and specs
 ```
 
-## Adding Team Photos
-
-Place a JPEG/PNG/WebP image in `src/assets/karayakarta/` named after the person's first name (e.g., `rahul.jpeg`). The image will be automatically matched to the team member in the Sabhasad section.
-
 ## Language Support
 
 The site supports English (default) and Marathi. Translations are defined in `src/lib/i18n.tsx`. Toggle between languages using the button in the header.
 #
+
