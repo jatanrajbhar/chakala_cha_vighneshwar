@@ -13,7 +13,7 @@ const Contact = () => {
       icon: MapPin,
       label: t.contactLocation,
       value: "5, Dr Karanjia Marg, Tarun Bharat Society, Chakala, Andheri East, Mumbai, Maharashtra 400099",
-      link: "https://maps.google.com/?q=Chakala+Cha+Vighneshwar,+Andheri+East,+Mumbai",
+      link: "https://maps.app.goo.gl/V5FaN12UAk3E1q9x8",
     },
     {
       icon: Instagram,

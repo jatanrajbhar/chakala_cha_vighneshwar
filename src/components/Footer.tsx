@@ -104,10 +104,15 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-2 text-muted-foreground text-sm">
+                <a
+                  href="https://maps.app.goo.gl/V5FaN12UAk3E1q9x8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-muted-foreground hover:text-secondary transition-colors text-sm"
+                >
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                   <span>Chakala, Andheri East, Mumbai</span>
-                </div>
+                </a>
               </li>
             </ul>
           </motion.div>
